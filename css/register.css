@@ -1,0 +1,407 @@
+body{
+    background: #fff;
+}
+.wrapper{
+    width:990px;
+    margin:auto;
+}
+/***********  1.上:头部   start  ***********/
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding:14px 0 20px;
+}
+.header .logo a{
+    display:flex;
+    justify-content: space-between;
+    width:330px;
+    height:60px;
+}
+.header .logo{
+    width:330px;
+    height:60px;
+    line-height: 60px;
+}
+
+.header .logo p{
+    display: table-cell;
+    line-height: 44px;
+    height:44px;
+    margin: 8px 0 0 8px;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #666;
+    border-left: 1px solid #e6e6e6;
+    cursor: pointer;
+}
+
+.header .register-bar{
+    height:60px;
+    line-height:60px;
+    font-size: 14px;
+    color:#333;
+}
+.header .register-bar a{
+    color:#c00;
+    padding: 3px 10px;
+    margin-left:10px;
+    border-radius:2px;
+}
+.header .register-bar a:hover{
+    color:#fff;
+    background:#c00;
+}
+/***********  1.上:头部   end  ***********/
+
+/***********  2.中:注册   start  ***********/
+.register-wrap {
+    border: 1px solid #e6e6e6;
+    width: 990px;
+    margin: auto;
+}
+.register-wrap .title {
+    padding: 16px 0 16px 90px;
+    background: #fafafa;
+    font-size: 18px;
+    color: #999;
+}
+.register-wrap .container{
+    display: flex;
+    justify-content: space-between;
+    padding:30px 100px;
+}
+.register-module{
+    width:500px;
+}
+.register-module .register-tab{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height:40px;
+    margin-bottom:40px;
+}
+.register-tab .iconfont{
+    font-size:24px;
+}
+.register-tab>div{
+    width:50%;
+    height:40px;
+    border:solid #e6e6e6;
+    text-align: center;
+    font-size:20px;
+    line-height: 40px;
+    cursor:pointer;
+}
+.register-tab .current{
+    border-width:2px 1px 0;
+    border-top-color:#e02d2d;
+    color:#e02d2d;
+
+}
+.register-tab>div:last-child{
+    border-width:0 0 1px;
+}
+.register-form{
+    width:100%;
+    height:40px;
+    margin-bottom:40px;
+    line-height:40px;
+    position:relative;
+}
+.register-form .label{
+    float:left;
+    width:90px;
+    height:40px;
+    font-size:14px;
+    text-align: right;
+    line-height: 40px;
+}
+.register-form .label .xh{
+    color:#e02d2d;
+    margin-right:3px;
+    font-style: normal;
+    vertical-align: middle;
+}
+.register-form .text {
+    float:left;
+    display: block;
+    margin: 0 10px 0 0;
+    padding: 8px 5px;
+    width: 290px;
+    height: 40px;
+    border: 1px solid #ccc;
+    outline:0;
+}
+.register-form .tips{
+    position:absolute;
+    left:90px;
+    bottom:-40px;
+    color:#aaa;
+}
+.email-captcha .text,.sms-captcha .text{
+    width:170px;
+}
+.sms-captcha .get-captcha{
+    width:110px;
+    height:40px;
+}
+.wrong-tips{
+    position:absolute;
+    top:0px;
+    left:390px;
+    white-space: nowrap;
+    height:40px;
+    line-height:40px;
+    color:#EA483E;
+    display:none;
+}
+.email-captcha+.wrong-tips{
+    left:420px;
+}
+.wrong-tips .icon-close{
+    font-size:14px;
+    background:#BA2619;
+    color:#fff;
+    border-radius: 50%;
+}
+.agreement{
+    display: block;
+    margin: 0 10px 0 90px;
+    padding: 8px 5px;
+    width: 290px;
+    height: 40px;
+}
+.agreement a{
+    color:#244A9A;
+}
+.agreement a:hover{
+    color:#BA2619;
+    text-decoration: underline;
+}
+.register-btn{
+    float:left;
+    display: block;
+    margin: 0 10px 0 90px;
+    padding: 8px 5px;
+    width: 290px;
+    height: 40px;
+    border: 1px solid #ccc;
+    outline:0;
+    background:#CA4037;
+    cursor:pointer;
+}
+.register-btn:hover{
+    background:#B43128;
+}
+/* 快速登录 */
+.fast-login {
+    margin-left:80px;
+    padding-left:25px;
+    width: 270px;
+    height:300px;
+    border-left: 1px solid #f5f5f5;
+}
+.fast-login p{
+    line-height:22px;
+}
+.fast-login p a{
+    color:#244A9A;
+}
+.fast-login p a:hover{
+    color:#BA2619;
+    text-decoration: underline;
+}
+.fast-login-list a{
+    display: block;
+    height:36px;
+    margin-top:15px;
+    line-height:36px;
+    font-size:14px;
+    color:#fff;
+    padding-left:10px;
+    border-radius: 3px;
+}
+.fast-login-list a i{
+    font-size:26px;
+    vertical-align: middle;
+}
+.weixin{
+    background:#6FAC44;
+}
+.weixin:hover{
+    background:#8CBE69;
+}
+.sina{
+    background:#E2614C;
+}
+.sina:hover{
+    background:#E88170;
+}
+.qq{
+    background:#4398DD;
+}
+.qq:hover{
+    background:#69ACE4;
+}
+.alipay{
+    background:#E58234;
+}
+.alipay:hover{
+    background:#E99758;
+}
+.baidu{
+    background:#2A32D8;
+}
+.baidu:hover{
+    background:#767CE5;
+}
+/***********  2.中:注册   end  ***********/
+
+/***********  3.下:底部   start  ***********/
+.footer{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    padding:12px 0 25px;
+    border-top:1px solid #cdcdcd;
+}
+.footer .wrapper{
+    display:flex;
+    justify-content: space-between;
+}
+.about a{
+    margin: 0 10px;
+    color: #666;
+}
+.login-content{
+    position:relative;
+    padding-top:23px;
+}
+.login-wrong-tips {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    margin:1px 0;
+    padding-left:5px;
+    width: 100%;
+    height: 22px;
+    font-size: 12px;
+    color: #f33;
+    border: 1px solid #f99;
+    line-height:20px;
+}
+.login-wrong-tips .icon-close{
+    font-size:12px;
+    border-radius: 50%;
+    background:#BA2619;
+    color:#fff;
+    font-weight: bold;
+}
+.form-item {
+    /* position: relative; */
+    margin: 0 0 7px;
+    padding: 8px 5px;
+    height: 40px;
+    border: 1px solid #ccc;
+    line-height: 40px;
+}
+.form-item .text {
+    display: block;
+    width: 278px;
+    height: 22px;
+    font-size: 14px;
+    border: 0;
+    outline:0;
+}
+.form-other{
+    height: 40px;
+    line-height: 40px;
+}
+.forget-password{
+    color:#244A9A;
+}
+.forget-password:hover{
+    color:#BA2619;
+}
+.login-layer-btn{
+    margin: 0 0 10px;
+    width: 290px;
+    height: 40px;
+    font-size:14px;
+    color: #fff;
+    text-align: center;
+    border: 0;
+    outline:0;
+    background:#CA3F37;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.login-layer-btn:hover{
+    background:#B7332A;
+}
+.otherLogin-bar .iconfont{
+    color:#BA2619;
+}
+.collaborate {
+    width: 290px;
+    text-align: center;
+    margin-top: 15px;
+    color: #666666;
+}
+.xian:first-child {
+    margin-right: 9px;
+}
+.xian:last-child {
+    margin-left: 9px;
+}
+.xian {
+    height: 1px;
+    background: #f0f0f0;
+    width: 100px;
+    margin-top: 7px;
+}
+.login-foot {
+    margin: 10px 0 0;
+    display:flex;
+    justify-content: space-between;
+    padding:0 20px;
+}
+.login-foot a{
+    width:34px;
+    height:34px;
+    border-top:1px solid #ddd;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 34px;
+    
+}
+.login-foot i{
+    font-size:32px;
+    
+}
+
+.mobileLogin-content .captcha-item,.mobileLogin-content .phone-number{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    border:0;
+    padding:0;
+}
+.captcha-item .text,.phone-number .text{
+    width:182px;
+    height:40px;
+    border: 1px solid #ccc;
+    margin: 0 0 7px;
+    padding: 8px 5px;
+    line-height: 40px;
+}
+.phone-number .btn{
+    width:109px;
+    border-left:0;
+    cursor:pointer;
+    background:#f8f8f8;
+}
+.phone-number .btn:hover{
+    background:#F2F2F2;
+}
+/***********  3.下:底部   end  ***********/
