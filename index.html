@@ -10,6 +10,7 @@
         input[type="button"],
         button { -webkit-appearance: none; }
         .btn{
+            display:inline-block;
             margin:20px auto;
             padding:10px 20px;
             background:#65A77B;
@@ -24,14 +25,6 @@
     <title>我的首页</title>
 </head>
 <body>
-    <button class="btn">my-project</button>
-    <script src="project/js/jquery-3.2.0.js"></script>
-    <script>
-        $(()=>{
-            $(".btn").click(()=>{
-                location="project/index.html"
-            })
-        })
-    </script>
+    <a class="btn" hrsf="project/index.html">my-project</a>
 </body>
 </html>
