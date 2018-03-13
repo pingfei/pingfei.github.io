@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        input[type="submit"],
+        input[type="reset"],
+        input[type="button"],
+        button { -webkit-appearance: none; }
+        .btn{
+            padding:10px 20px;
+            background:#65A77B;
+            border:0;
+            border-radius:3px;
+            font-size:20px;
+            color:#fff;
+            outline:0;
+            cursor:pointer;
+        }
+    </style>
+    <title>我的首页</title>
+</head>
+<body>
+    <button class="btn">my-project</button>
+    <script src="project/js/jquery-3.2.0.js"></script>
+    <script>
+        $(()=>{
+            $(".btn").click(()=>{
+                location="project"
+            })
+        })
+    </script>
+</body>
+</html>
