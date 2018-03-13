@@ -1,0 +1,703 @@
+/***********  banner   start  ***********/
+.banner{
+    width:100%;
+    height:400px;
+}
+.banner-container{
+    position:absolute;
+    z-index:100;
+    width:100%;
+    height:400px;
+}
+/* banner 图 */
+.banner-content{
+    width:100%;
+    height:400px;
+    overflow: hidden;
+    cursor:pointer;
+}
+.banner-imgs{
+    display: flex;
+    justify-content: flex-start;
+    width:7680px;
+    height:400px;
+    margin-left:calc(50% - 960px);
+}
+/* 下 圆点 */
+.banner-pages{
+    position:absolute;
+    width:50px;
+    bottom:15px;
+    left:calc(50% - 25px);
+    display: flex;
+    justify-content: space-between;
+}
+.banner-pages-item{
+    border:5px solid #fff;
+    border-radius:50%;
+    cursor: pointer;
+}
+.banner-pages-item.current{
+    border-color:#BD3127;
+}
+/* 左右按钮 */
+.banner-btn{
+    position:absolute;
+    width:62px;
+    height:94px;
+    line-height:94px;
+    top:calc(50% - 50px);
+    text-align: center;
+}
+.banner-btn:hover{
+    background:rgba(0,0,0,0.7);
+}
+.banner-btn .iconfont{
+    display: inline-block;
+    
+    font-size:60px;
+    color:#fff;
+    margin:0;
+    
+}
+.banner-prev{
+    left:calc(50% - 740px);
+}
+.banner-next{
+    right:calc(50% - 740px);
+}
+/***********  banner   end  ***********/
+
+/***********  团购   start  ***********/
+.index-section{
+    margin-top:40px;
+}
+
+
+.sec-header-title{
+    font-size:24px;
+    font-weight: normal;
+    margin-right:5px;
+    color:#000;
+}
+.sec-header-title .iconfont{
+    font-size:24px;
+    color:#f33;
+    font-weight: bold;
+}
+.sec-header-tip{
+    font-size:16px;
+    margin-top:8px;
+    color:#999;
+}
+.section-header{
+    margin-bottom:10px;
+}
+.section-header .icon-jiantou{
+    display: inline-block;
+    transform: rotate(45deg);
+}
+.more-link{
+    font-size:14px;
+    margin-top:10px;
+}
+.tuan-details{
+    margin-top:15px;
+    display: flex;
+    justify-content: space-between;
+}
+.tuan-slide{
+    width:440px;
+    height:160px;
+    /* border:1px solid red; */
+    padding:20px;
+    overflow: hidden;
+    position: relative;
+}
+.tuan-first{
+    background:#fff6dd;
+}
+.tuan-two{
+    background:#ffe5e5;
+}
+.tuan-three{
+    background:#e3f9ff;
+}
+/**** 显示层 start ****/
+.tuan-pro-top{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    height:100%;
+}
+/* 左 文本描述 */
+.tuan-top-left{
+    width:calc(100% - 120px);
+    height:100%;
+}
+.tuan-title{
+    font-size:16px;
+    color:#000;
+    margin-bottom:5px;
+}
+.tuan-subtitle{
+    font-size:14px;
+    color:#999;
+}
+.tuan-price{
+    height:50px;
+    font-size:14px;
+    color:#f33;
+    line-height:50px;
+}
+.tuan-price em{
+    font-size:15px;
+    color:#f33;
+}
+.tuan-time{
+    font-size:14px;
+    color:#999;
+}
+.tuan-time>em{
+    color:#000;
+}
+.tuan-red-color{
+    color:#f33;
+}
+/* 右 图片 */
+.tuan-top-right{
+    width:120px;
+    height:120px;
+}
+.tuan-top-right img{
+    width:100%;
+    height:100%;
+}
+/**** 显示层 end ****/
+/**** 隐藏层 start ****/
+.tuan-pro-intro{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    color:#fff;
+    margin-top:160px;
+    transition: all .5s linear;
+}
+/* 左 图片 */
+.tuan-pro-picside{
+    width: 130px;
+    height: 100%;
+    /* border:1px solid green; */
+}
+.tuan-pro-pic{
+    width:80px;
+    height:80px;
+    margin:0 auto;
+    border-radius:50%;
+    overflow:hidden;
+}
+.tuan-pro-pic img{
+    width:80px;
+    height:80px;
+}
+.ware-detail{
+    /* color:#fff; */
+    margin:10px auto;
+    width:100%;
+    text-align: center;
+}
+.ware-detail a{
+    color:#fff;
+    margin:0 5px;
+}
+.ware-detail a:hover{
+    text-decoration: underline;
+}
+/* 右 文字说明 */
+.tuan-intro-text{
+    width:calc(100% - 140px);
+    height:100%;
+}
+.tuan-intro-text h4{
+    height:28px;
+    line-height:28px;
+    font-size:16px;
+}
+.tuan-intro-price{
+    height:24px;
+    line-height:24px;
+    font-size:14px;
+}
+.tuan-go-btn{
+    display:block;
+    width:72px;
+    height:28px;
+    line-height:28px;
+    margin-top:9px;
+    border-radius:2px;
+    background:#f33;
+    font-size:14px;
+    text-align: center;
+    color:#fff;
+}
+.tuan-intro-text .tuan-go-btn:hover{
+    color:#fff;
+    text-decoration:underline;
+}
+.tuan-slide:hover .tuan-pro-intro{
+    margin-top:0;
+}
+/**** 隐藏层 end ****/
+/***********  团购   end  ***********/
+
+/***********  领券中心   start  ***********/
+.couponSection .coupon-list{
+    height:100px;
+    display:flex;
+    justify-content:space-between;
+}
+.coupon-all{
+    width:140px;
+    height:100%;
+    
+}
+.coupon-all-text{
+    width:140px;
+    height:100px;
+    background:url("../images/index/coupon-all-bg.png") no-repeat -28px -1px;
+    padding:10px 10px 20px;
+}
+.coupon-all-title{
+    font-size:24px;
+    height:40px;
+    line-height:40px;
+    font-weight:normal;
+    color:#fff;
+}
+.coupon-all-subtitle{
+    font-size:14px;
+    height:21px;
+    line-height:21px;
+    color:#fcc;
+}
+.coupon-all-go{
+    display: block;
+    height:32px;
+    font-size:14px;
+    line-height:32px;
+    color:#fff;
+}
+.coupon-all-go:hover{
+    color:#fff;
+    text-decoration: underline;
+}
+.coupon-item{
+    width:266px;
+    height:100px;
+    display: flex;
+    justify-content: space-between;
+    background:#fff;
+}
+.coupon-item-left{
+    width:calc(100% - 16px);
+    height:100%;
+    padding:10px 10px 0;
+}
+.coupon-item-right{
+    width:16px;
+    height:100%;
+    background:#f7f7f7 url("../images/index/zol-home-icons.png") no-repeat -68px 0;
+}
+.coupon-item-top{
+    height:60px;
+    display:flex;
+    justify-content: space-between;
+    color:#f66
+}
+.coupon-item-top h2{
+    width:120px;
+    font-style: italic;
+    text-align:left;
+    font-size:32px;
+}
+.coupon-item-top>div{
+    width:calc(100% - 120px);
+}
+.coupon-item-top h5{
+    font-size:14px;
+    padding:6px 0;
+}
+.coupon-item-top p{
+    color:#999;
+}
+.coupon-item-bottom{
+    text-align:center;
+    height:30px;
+    line-height:30px;
+    border-top:1px solid #f3f3f3;
+}
+.coupon-item .coupon-iten-go{
+    color:#f66;
+}
+.coupon-item .coupon-iten-go:hover{
+    text-decoration:underline;
+}
+
+/***********  领券中心   end  ***********/
+/***********  Z智选   start  ***********/
+.noopsyche-container{
+    width:100%;
+    height:720px;
+    padding:20px;
+    background:#fff;
+}
+.noopsyche-box{
+    width:1160px;
+    height:660px;
+}
+.noopsyche-box>div{
+    width:1160px;
+}
+/* 上 */
+.noopsyche-focus_tab {
+    width: 101px;
+    overflow: hidden;
+}
+.noopsyche-focus_tab li {
+    height: 48px;
+    border-top: 1px solid #fff;
+    background: #ececec;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+}
+.noopsyche-focus_tab .active {
+    background: #ce1a1b;
+    color: #fff;
+}
+.noopsyche-focus_slide_list {
+    float: left;
+    width: 630px;
+    height: 259px;
+    /* overflow: hidden; */
+}
+
+.noopsyche-focus_slide_list img{
+    width: 630px;
+    height: 259px;
+}
+.noopsyche-focus_slide_list li{
+    display: none;
+}
+.noopsyche-focus_slide_list .active{
+    display: block;
+}
+.noopsyche-pics a {
+    float: left;
+    overflow: hidden;
+    transition:all .1s linear;
+}
+.noopsyche-pics img{
+    width:214px;
+    height:259px;
+    transition:all .3s linear;
+}
+.noopsyche-pics img:hover{
+    transform:scale(1.1);
+}
+/* 中 */
+.noopsyche-pro-list li {
+    position: relative;
+    float: left;
+    width: 182px;
+    height: 182px;
+    margin-right:1px;
+    overflow: hidden;
+}
+.noopsyche-pro-list li img{
+    /* width: 182px; */
+    height: 182px;
+}
+.noopsyche-pro-list .noopsyche-pro_mark {
+    position: absolute;
+    top: 152px;
+    left: 0;
+    width: 182px;
+    height: 182px;
+    padding: 3px 0;
+    color: #fff;
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    transition: all .3s linear;
+}
+.noopsyche-pro-list li:hover .noopsyche-pro_mark{
+    top: 0;
+}
+.noopsyche-pro_name {
+    height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.noopsyche-pro_price {
+    font-size: 16px;
+    line-height: 24px;
+}
+.noopsyche-pro_btn {
+    display: block;
+    width: 84px;
+    height: 30px;
+    margin: 3px auto 13px;
+    border-radius: 2px;
+    background: #ce1a1b;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+}
+.noopsyche-pro-list a {
+    color: #fff;
+}
+.noopsyche-pro_else a:hover {
+    color: #fff;
+    text-decoration:underline;
+}
+.noopsyche-pro_btn a:hover {
+    color: #fff;
+}
+.noopsyche-pro_else {
+    height: 18px;
+    padding: 0 0 4px;
+}
+.noopsyche-top+div .noopsyche-pics img{
+    width:428px;
+    height:182px;
+}
+/* 下 */
+.noopsyhe-banner img{
+    width:100%;
+}
+/***********  Z智选   end  ***********/
+
+/***********  品牌精选   start  ***********/
+.choice-brand_list{
+    display:flex;
+    justify-content: space-between;
+
+}
+.choice-brand_list li{
+    width:230px;
+    height:340px;
+}
+.choice-brand-fisrt img{
+    width:230px;
+    height:340px;
+}
+.choice-brand_item{
+    padding:5px;
+    background:#fff;
+    overflow:hidden;
+}
+.choice-brand_item img{
+    width:220px;
+    height:220px;
+    transition:all .3s linear;
+}
+.choice-brand_item:hover img{
+    transform:scale(1.1);
+}
+.choice-brand_item p{
+    width:100%;
+    height:30px;
+    font-size:14px;
+    line-height:30px;
+    text-align:center;
+    color:#333;
+}
+.choice-brand_item a{
+    font-size:14px;
+    color:#333;
+}
+.choice-brand_item a:hover{
+    text-decoration:underline;
+}
+.choice-brand_item em{
+    color:#f33;
+}
+/***********  品牌精选   end  ***********/
+
+/***********  电子竞技    start  ***********/
+.gaming{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    height:566px;
+}
+.column-box>div{
+    /* border:1px solid green; */
+    width:594px;
+    height:100%;
+}
+.column-title{
+    height: 46px;
+    padding: 0 15px;
+    line-height: 46px;
+    background:#7095ee;
+    color:#fff;
+}
+.column-title h3{
+    font-size:18px;
+}
+.column-title ul{
+    width:238px;
+    height:25px;
+    margin-top:10px;
+}
+.column-title ul li{
+    float:left;
+    height: 25px;
+    margin-left: 28px;
+    line-height: 25px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.column-current{
+    border-bottom:3px solid #fff;
+}
+.column-con{
+    background:#fff;
+}
+.column-focus{
+    width:594px;
+    height:260px;
+    overflow:hidden;
+    position:relative;
+}
+.column-box{
+    width:2376px;
+    height:260px;
+    display: flex;
+    justify-content: space-between;
+}
+.column-pager-control{
+    position:absolute;
+    bottom:15px;
+    left:0;
+    right:0;
+    margin:auto;
+    text-align:center;
+}
+.column-pager-control>div{
+    display:inline-block;
+    border:5px solid #fff;
+    border-radius:50%;
+}
+.column-pager-control .column-pager{
+    border-color:red;
+}
+.column-first{
+    width:594px;
+    height:260px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+.column-list{
+    width:594px;
+    height:520px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+.column-item{
+    width:198px;
+    height:260px;
+    padding:0 19px;
+}
+.column-item img{
+    width:160px;
+    height:160px;
+}
+.column-ware-name{
+    height: 22px;
+    line-height: 22px;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.column-ware-name a{
+    color:#333;
+}
+.column-ware-price{
+    height: 34px;
+    line-height: 34px;
+    font-size: 18px;
+    color: #f33;
+}
+.column-title .more-link{
+    margin-top:0;
+    color:#fff;
+}
+.column-title .more-link:hover{
+    color:#fff;
+}
+/***********  电子竞技   end  ***********/
+/***********  本周热销   start  ***********/
+.digital-hd{
+    height: 94px;
+    line-height: 94px;
+    text-align: center;
+}
+.digital-title{
+    display: inline-block;
+    font-size: 24px;
+    padding: 0 15px;
+    background-color: #f7f7f7;
+}
+.digital-dashed{
+    display: inline-block;
+    width:calc(50% - 70px);
+    border-bottom:1px dashed #d8d8d8;
+    margin-bottom:8px;
+}
+.digital-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.digital-item {
+    width: 230px;
+    height: 320px;
+    padding: 10px 15px;
+    margin-bottom:12px;
+    background:#fff;
+}
+.digital-item_region {
+    padding: 18px 0;
+    margin-bottom: 0;
+    position: relative;
+}
+.digital-item-name {
+    height: 22px;
+    line-height: 22px;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.digital-item-price {
+    height: 34px;
+    line-height: 34px;
+    font-size: 18px;
+    color: #f33;
+}
+/***********  本周热销   end  ***********/

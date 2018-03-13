@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <title>login</title>
+</head>
+<body class="login-index">
+<div class="wrapper">
+    <div class="header">
+        <div class="logo">
+            <a title="Z商城" href="#">
+                <img width="130" height="60" title="Z商城" alt="Z商城" src="images/login/logo_130x60.png">
+                <p>中关村在线旗下网上商城</p>
+            </a>
+        </div>
+        <div class="register-bar">
+            还没有Z商城账号？<a href="#">立即注册</a>
+        </div>
+    </div>
+    <form id="J_loginForm" action="javascript:void(0)">
+        <div class="login-wrap">
+            <div class="ad-div">
+                <div>
+                    <a href="#" target="_blank">
+                        <img width="520" height="350" src="images/login/ad2_1.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="login-layer">
+                <div class="login-head">
+                    <h3 class="curLogin">登录Z商城</h3>
+                    <h3>商家登录</h3>
+                </div> 
+                <!-- 登录Z商城 -->
+                <div class="login-select">
+                    <!-- 账号登陆 -->
+                    <div class="login-content"  style="display:none;">
+                        <div class="login-wrong-tips" style="display:none;">
+                            -
+                        </div>
+                        <div class="form-item username">
+                            <input type="text" placeholder="手机号/邮箱/用户名" class="text" name="username">
+                        </div> 
+                        <div class="form-item"> 
+                            <input type="password" placeholder="密码" class="text">
+                        </div> 
+                        <div class="form-other"> 
+                            <label class="autologon"></label> 
+                            <a href="javascript:void(0)" class="otherLogin-bar mobileLogin-bar lf" rel="J_phone">
+                                <i class="iconfont icon-iconfontshouji"></i>
+                                手机动态码登录
+                            </a> 
+                            <a target="_blank" href="#" class="forget-password rt">忘记密码？</a>
+                        </div>
+                        <input type="button" value="登 录" class="login-layer-btn">
+                    </div> 
+                    <!-- 手机验证码登陆 -->
+                    <div class="login-content mobileLogin-content">
+                        <div class="login-wrong-tips">
+                            -
+                        </div>
+                        <div class="form-item "> 
+                            <input type="text" placeholder="手机号" class="text" name="login_mobile_number"> 
+                        </div> 
+                        <div class="form-item captcha-item"> 
+                            <input type="text" placeholder="图片验证码" class="text" name="picCode">
+                            <img width="100px" height="40px" src="images/login//captcha.png" alt="图片验证码" class="rt"> 
+                        </div> 
+                        <div class="form-item phone-number"> 
+                            <input type="text" autocomplete="off" placeholder="短信验证码" class="text" name="login_mobile_code"> 
+                            <input name="login_send_button" type="button" value="发送验证码" class="btn"> 
+                            <span class="captcha-loading" style="display: none">100秒后重新获取</span> 
+                        </div>
+                        <input type="button" value="登 录" class="login-layer-btn">
+                    </div> 
+                    <div class="collaborate clear"> 
+                        <div class="xian lf"></div> 
+                        <p class="lf">合作账号登录</p> 
+                        <div class="xian lf"></div> 
+                    </div> 
+                    <div class="login-foot"> 
+                        <a target="_blank" class="weixin" href="#">
+                            <i class="iconfont icon-weixin"></i>
+                        </a> 
+                        <a target="_blank" class="sina" href="#">
+                            <i class="iconfont icon-xinlang"></i>
+                        </a> 
+                        <a target="_blank" class="qq" href="#">
+                            <i class="iconfont icon-qq"></i>
+                        </a> 
+                        <a target="_blank" class="alipay" href="#">
+                            <i class="iconfont icon-iconfonticons"></i>
+                        </a> 
+                        <a target="_blank" class="baidu" href="#">
+                            <i class="iconfont icon-baidu"></i>
+                        </a> 
+                    </div> 
+                </div>
+                <!-- 商家登录 -->
+                <div class="login-select" style="display:none;">
+                    <div class="login-content"> 
+                        <div class="login-wrong-tips" style="display:none;">
+                            <i class="iconfont icon-close"></i>
+                            用户名或密码有误
+                        </div> 
+                        <div class="form-item username"> 
+                            <input type="text" placeholder="用户名" class="text" name="username" maxlength="100">
+                        </div> 
+                        <div class="form-item"> 
+                            <input type="password" placeholder="密码" class="text" name="password">
+                        </div> 
+                        <div class="form-other"> 
+                            <label class="autologon"></label> 
+                            <a target="_blank" href="#" class="forget-password rt">忘记密码？</a>
+                        </div>
+                        <input type="button" value="登 录" class="login-layer-btn"> 
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </form> 
+</div>
+<div class="footer">
+    <div class="wrapper">
+        <div class="about">
+            <a href="#" target="_blank">关于Z商城</a>|<a href="#" target="_blank">联系我们</a>|<a href="#" target="_blank">帮助中心</a>
+        </div>
+        <div class="copyright">
+            &copy;
+            <span class="fullYear">2018</span>. 中关村在线 版权所有
+        </div>
+    </div>
+</div>
+</body>
+</html>
