@@ -1042,7 +1042,7 @@ visibility: visible; */
 .attributes-list li span{
     font-weight:bold;
 }
-.sevice-title{
+.details-container .sevice-title{
     width:790px;
     height:33px;
     background:url("../images/product-details/sevice-title-new.png");
@@ -1143,7 +1143,6 @@ visibility: visible; */
 .comment-filter li{
     float:left;
     padding:0 15px;
-    cursor:pointer;
 }
 .comment-filter label{
     cursor:pointer;
@@ -1177,24 +1176,359 @@ visibility: visible; */
 .comment-time span{
     padding-right:15px;
 }
-.comment-page{
+.detail-page{
     text-align:center;
     margin-top:10px;
     vertical-align:middle;
 }
-.comment-page a{
+.detail-page a{
     display:inline-block;
     height:30px;
     line-height:28px;
     padding:0 10px;
     border:1px solid #ededed;
 }
-.comment-page i{
+.detail-page i{
     font-size:12px;
     font-weight:bold;
     color:#c00;
 }
+.detail-page .cur{
+    color:#c00;
+}
+.detail-page .no-page{
+    color:#b3b3b3;
+}
+.detail-page .no-page i{
+    color:#b3b3b3;
+}
 /* 购买评价 end */
+/* 交易记录 start */
+.details-main>div{
+    width:790px;
+}
+.detail-head{
+    margin-top:10px;
+}
+.detail-head .title{
+    height:30px;
+    line-height:30px;
+    padding-left:15px;
+    background:#c00;
+    color:#fff;
+    position:relative;
+}
+.detail-head .cur{
+    color:#c00;
+}
+.detail-head-chk{
+    height:40px;
+    line-height:40px;
+    border:solid #ededed;
+    border-width:0 1px 1px;
+}
+.detail-head-chk li{
+    float:left;
+    margin-left:20px;
+}
+.detail-content{
+    margin-top:10px;
+    /* height:100px; */
+    width:790px;
+    /* border:1px solid #ddd; */
+}
+.detail-content table{
+    width:790px;
+    /* height:100%; */
+    border-collapse:collapse;
+    text-align:left;
+}
+.detail-content table thead{
+    height:30px;
+    line-height:30px;
+    background:#f8f8f8;
+    font-weight:100;
+}
+.detail-content thead td{
+    padding:0 15px;
+    color:#333;
+}
+.detail-content tbody td{
+    padding:15px;
+}
+.detail-content tbody tr{
+    border-bottom:1px solid #f2f2f2;
+}
+.cell-buyer{
+    width:162px;
+}
+.cell-type{
+    width:317px;
+}
+.cell-count{
+    width:94px;
+}
+.cell-time{
+    width:200px;
+    color:#999;
+}
+/* 交易记录 end */
+/* 购买咨询 start */
+
+.detail-head-chk .getconsult{
+    float:right;
+    margin-right:15px;
+}
+.detail-head-chk .getconsult a{
+    color:#134ba0;
+}
+.detail-head-chk .getconsult a:hover{
+    text-decoration:underline;
+}
+.detail-head .title .iconfont{
+    position:absolute;;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+}
+.consult-content{
+    margin:20px 0;
+    padding-left:15px;
+    line-height:20px;
+}
+.consult-box .iconfont{
+
+    display:inline-block;
+    width:20px;
+    height:20px;
+    color:#c00;
+    font-size:20px;
+    margin-right:10px;
+}
+.pub_consult_content textarea{
+    display: block;
+    padding: 5px 15px;
+    width: 100%;
+    height: 153px;
+    border: 1px solid #ededed;
+    border-top:0;
+    outline:0;
+    resize: none;
+    font: 12px/22px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    color: #666;
+}
+.question-foot{
+    width:100%;
+    height:36px;
+    line-height:36px;
+    border: 1px solid #ededed;
+    border-top:0;
+    position:relative;
+}
+.question-foot .submit-content{
+    color:#999;
+}
+.question-foot .text-number{
+    position:absolute;
+    right:150px;
+    top:0;
+    bottom:0;
+    margin:auto;
+    color:#999;
+}
+.question-foot .text-number em{
+    color:#c00;
+}
+.question-foot .publish-btn{
+    position:absolute;
+    right:-1px;
+    top:-1px;
+    width:100px;
+    height:37px;
+    line-height:37px;
+    text-align:center;
+    color:#fff;
+    background:#c00;
+}
+/* 购买咨询 end */
+/* 参数 start */
+.parameter{
+    margin-top:10px;
+}
+.parameter table{
+    border-collapse:collapse;
+    vertical-align: middle;
+}
+.parameter th {
+    height: 30px;
+    padding: 2px 0 2px 20px;
+    text-align: left;
+    background: #f1fafe;
+    border: 1px solid #dbe8f4;
+}
+.parameter td {
+    height: 30px;
+    padding: 2px 10px 2px 10px;
+    border: 1px solid #dbe8f4;
+    color: #666;
+}
+.parameter .parameter-title {
+    width: 130px;
+    background: #f1fafe;
+    text-align: right;
+}
+.parameter .parameter-infor {
+    background: #fff;
+    text-align: left;
+}
+/* 参数 end */
+/* 服务承诺 start */
+.service-guarantee {
+    padding: 0 50px;
+    margin-top:10px;
+}
+.service-guarantee .sevice-title {
+    position: relative;
+    height: 60px;
+    line-height:60px;
+    font-size: 20px;
+    color: #00c576;
+    font-weight:normal;
+    margin:10px 0;
+}
+.service-guarantee .iconfont{
+    float:left;
+    display:inline-block;
+    width:60px;
+    height:60px;
+    color:#00c576;
+    font-size: 60px;
+    margin-right:10px;
+}
+.service-content {
+    margin-top:10px;
+    padding-bottom:20px;
+    font-size: 14px;
+    color: #646464;
+}
+.service-content dl {
+    padding: 10px 0;
+}
+.service-content dt {
+    padding: 0 0 5px;
+    color: #333;
+}
+.punishment-way, .return-instructions, .refund-way {
+    width: 100%;
+    margin: 10px 0 0;
+    border-collapse: collapse;
+    border: 1px solid #00c576;
+    vertical-align:middle;
+}
+.punishment-way .cell-1 {
+    width: 80px;
+    text-align: center;
+}
+.punishment-way .cell-2 {
+    padding: 10px;
+    width: 183px;
+}
+.punishment-way .cell-3 {
+    padding: 10px;
+    width: 192px;
+}
+.punishment-way .cell-4 {
+    padding: 10px;
+    width: 131px;
+    text-align: center;
+}
+.punishment-way th, .return-instructions th, .refund-way th {
+    background: #d3f5e8;
+    border: 1px solid #00c576;
+    color: #333;
+    font-size: 14px;
+}
+.punishment-way td, .return-instructions td, .refund-way td {
+    border: 1px solid #00c576;
+    color: #7a7a7a;
+    font-size: 14px;
+}
+
+.service-guarantee .icon-tianmaowuyoutuihuanhuo{
+    transform:rotate(90deg); 
+}
+/* 服务承诺 end */
+.consult-layer {
+    position: fixed;
+    z-index: 51;
+    top: 20vh;
+    right: 10%;
+}
+.quick-dove, .qq-consult{
+    display: block;
+    margin: -1px 0;
+    padding: 11px 0 11px;
+    width: 78px;
+    height:76px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    border: 1px solid #ededed;
+    background-color: #fff;
+    position: relative;
+    color: #333;
+}
+.consult-layer .iconfont{
+    display:block;
+    width:30px;
+    height:30px;
+    font-size:30px;
+    margin:0 auto;
+    color:#BA2619;
+}
+
+.quick-dove:hover, .qq-consult:hover, .consult-layer .hover .qq-consult {
+    position: relative;
+    z-index: 2;
+    background-color: #ffeded;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ffd9d9;
+}
+.consult-layer .hover .qq-consult {
+    border-bottom: 1px solid #ffeded;
+}
+.consult-layer .hover .custom-service {
+    position:absolute;
+    right:0;
+    top:149px;
+    display: block;
+    padding: 10px;
+    width: 110px;
+    border: 1px solid #ffd9d9;
+    background-color: #ffeded;
+}
+.backtop {
+    position: fixed;
+    z-index: 51;
+    top: 85vh;
+    right: 10%;
+    width: 60px;
+    height:60px;
+    background-color: #d0625c;
+    text-align: center;
+    line-height:60px;
+    cursor:pointer;
+}
+.backtop:hover{
+    background:#b10000;
+}
+.backtop .iconfont{
+    display: block;
+    color:#fff;   
+    font-size: 26px;
+}
 /* 右 内容 end */
 /***********   详情部分   end  ***********/
 /***********   详情   start  ***********/

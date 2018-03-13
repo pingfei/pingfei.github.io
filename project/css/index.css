@@ -1,13 +1,12 @@
 /***********  banner   start  ***********/
 .banner{
-    width:100%;
+    /*width:100%;*/
     height:400px;
 }
 .banner-container{
     position:absolute;
     z-index:100;
     width:100%;
-    min-width:1200px;
     height:400px;
 }
 /* banner 图 */
