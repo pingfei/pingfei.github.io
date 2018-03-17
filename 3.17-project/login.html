@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <title>login</title>
+</head>
+<body class="login-index">
+<div class="wrapper">
+    <div class="header">
+        <div class="logo">
+            <a title="Z商城" href="index.html">
+                <img width="130" height="60" title="Z商城" alt="Z商城" src="images/login/logo_130x60.png">
+                <p>中关村在线旗下网上商城</p>
+            </a>
+        </div>
+        <div class="register-bar">
+            还没有Z商城账号？<a href="register.html">立即注册</a>
+        </div>
+    </div>
+    <form id="loginForm" action="javascript:void(0)">
+        <div class="login-wrap">
+            <div class="ad-div">
+                <div>
+                    <a href="index.html" target="_blank">
+                        <img width="520" height="350" src="images/login/ad2_1.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="login-layer">
+                <div class="login-head">
+                    <h3 class="curLogin" id="login-user">登录Z商城</h3>
+                    <h3 id="login-seller"><!--商家登录--></h3>
+                </div> 
+                <!-- 登录Z商城 -->
+                <div class="login-select" data-id="login-user">
+                    <!-- 账号登陆 -->
+                    <div class="login-content user-content">
+                        <div class="login-wrong-tips" style="display:none;">
+                            -
+                        </div>
+                        <div class="form-item uname">
+                            <input type="text" placeholder="手机号/邮箱/用户名" class="text" data-id="user-u" name="uname">
+                        </div> 
+                        <div class="form-item upwd"> 
+                            <input type="password" placeholder="密码" class="text" data-id="user-p" name="upwd">
+                        </div> 
+                        <div class="form-item captcha-item"> 
+                            <input type="text" placeholder="图片验证码" class="text" name="picCode" data-id="user-c" onblur="code_check()">
+                            <img width="100px" height="40px" src="data/code.php" alt="图片验证码" class="rt code_pic" title="看不清，点击刷新"> 
+                        </div> 
+                        <div class="form-other"> 
+                            <!-- <label class="autologon"></label>
+                            <a href="javascript:void(0)" class="otherLogin-bar mobileLogin-bar lf">
+                                <i class="iconfont icon-iconfontshouji"></i>
+                                手机动态码登录
+                            </a>  -->
+                            <a target="_blank" href="javascript:void(0)" class="forget-password rt">忘记密码？</a>
+                        </div>
+                        <input type="button" value="登 录" class="login-layer-btn" data-id="user-btn">
+                    </div> 
+                    <!-- 手机验证码登陆 -->
+                    <!-- <div class="login-content mobileLogin-content"    style="display:none;">
+                        <div class="login-wrong-tips">
+                            -
+                        </div>
+                        <div class="form-item "> 
+                            <input type="text" placeholder="手机号" class="text" name="login_mobile_number"> 
+                        </div> 
+                        <div class="form-item captcha-item"> 
+                            <input type="text" placeholder="图片验证码" class="text" name="picCode">
+                            <img width="100px" height="40px" src="data/code.php" alt="图片验证码" class="rt code_pic" id="code_pic"> 
+                        </div> 
+                        <div class="form-item phone-number"> 
+                            <input type="text" autocomplete="off" placeholder="短信验证码" class="text" name="login_mobile_code"> 
+                            <input name="login_send_button" type="button" value="发送验证码" class="btn"> 
+                            <span class="captcha-loading" style="display: none">100秒后重新获取</span> 
+                        </div>
+                        <input type="button" value="登 录" class="login-layer-btn">
+                    </div>  -->
+                    <div class="collaborate clear"> 
+                        <div class="xian lf"></div> 
+                        <p class="lf">合作账号登录</p> 
+                        <div class="xian lf"></div> 
+                    </div> 
+                    <div class="login-foot"> 
+                        <a target="_blank" class="weixin" href="javascript:void(0)">
+                            <i class="iconfont icon-weixin"></i>
+                        </a> 
+                        <a target="_blank" class="sina" href="javascript:void(0)">
+                            <i class="iconfont icon-xinlang"></i>
+                        </a> 
+                        <a target="_blank" class="qq" href="javascript:void(0)">
+                            <i class="iconfont icon-qq"></i>
+                        </a> 
+                        <a target="_blank" class="alipay" href="javascript:void(0)">
+                            <i class="iconfont icon-iconfonticons"></i>
+                        </a> 
+                        <a target="_blank" class="baidu" href="javascript:void(0)">
+                            <i class="iconfont icon-baidu"></i>
+                        </a> 
+                    </div> 
+                </div>
+                <!-- 商家登录 -->
+                <!-- <div class="login-select" data-id="login-seller" style="display:none;">
+                    <div class="login-content"> 
+                        <div class="login-wrong-tips" style="display:none;">
+                            <i class="iconfont icon-close"></i>
+                            用户名或密码有误
+                        </div> 
+                        <div class="form-item uname"> 
+                            <input type="text" placeholder="用户名" class="text" data-id="seller-u" name="username" maxlength="100">
+                        </div> 
+                        <div class="form-item"> 
+                            <input type="password" placeholder="密码" class="text" data-id="seller-p"  name="password">
+                        </div> 
+                        <div class="form-other"> 
+                            <label class="autologon"></label>
+                            <a target="_blank" href="javascript:void(0)" class="forget-password rt">忘记密码？</a>
+                        </div>
+                        <input type="button" value="登 录" class="login-layer-btn" data-id="seller-btn"> 
+                    </div>
+                </div> -->
+            </div> 
+        </div>
+    </form> 
+</div>
+<div class="footer">
+    <div class="wrapper">
+        <div class="about">
+            <a href="javascript:void(0)" target="_blank">关于Z商城</a>|<a href="javascript:void(0)" target="_blank">联系我们</a>|<a href="javascript:void(0)" target="_blank">帮助中心</a>
+        </div>
+        <div class="copyright">
+            &copy;
+            <span class="fullYear">2018</span>. 中关村在线 版权所有
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.2.0.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
