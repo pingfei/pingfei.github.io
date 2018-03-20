@@ -37,6 +37,9 @@
 	color:#f33;
 	text-decoration:underline;
 }
+.welcomeList{
+	display:none;
+}
 /****右:quick-menu****/
 .topbar>.quick-menu{
 	display:flex;
