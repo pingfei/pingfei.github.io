@@ -1,14 +1,15 @@
 .fixed-nav-bar{
     position: fixed;
     top: 68px;  
-    display: block;
-    z-index: 50;
-    left:calc(50% - 675px);
+    z-index: 1000;
+    left:calc(50% - 685px);
     width: 80px;
     /* margin: 0 0 0 -720px; */
     background-color: #908787;
     overflow: hidden;
+    display:none;
 }
+
 .fixed-nav-bar a{
     position: relative;
     display: block;

@@ -42,3 +42,20 @@ input[type="submit"],
  input[type="reset"],
  input[type="button"],
  button { -webkit-appearance: none; }
+ #topbar{
+	 position:fixed;
+ }
+ #search-bar{
+	position:fixed;
+	width:100%;
+	top:0;
+	left:10;
+	z-index:1000;
+	display:none;
+ }
+ #search-bar.in, #fixedNavBar.in{
+	 display:block;
+ }
+ #fixedNavBar{
+	display:none;
+ }

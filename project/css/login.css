@@ -120,6 +120,10 @@
     color: #f33;
     border: 1px solid #f99;
     line-height:20px;
+    display:none;
+}
+.login-wrong-tips.in{
+    display:block;
 }
 .login-wrong-tips .icon-close{
     font-size:12px;
@@ -245,7 +249,7 @@
     background:#2A32D8;
     color:#fff;
 }
-.mobileLogin-content .captcha-item,.mobileLogin-content .phone-number{
+ .captcha-item, .phone-number{
     width:100%;
     display: flex;
     justify-content: space-between;
@@ -259,6 +263,9 @@
     margin: 0 0 7px;
     padding: 8px 5px;
     line-height: 40px;
+}
+.captcha-item img{
+    cursor:pointer;
 }
 .phone-number .btn{
     width:109px;

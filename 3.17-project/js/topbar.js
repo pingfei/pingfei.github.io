@@ -1,3 +1,0 @@
-$(()=>{
-    $("#topbar").load("topbar.html");
-})

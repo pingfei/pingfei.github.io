@@ -1,10 +1,10 @@
 <?php
 require_once("../init.php");
-@$uname = $_REQUEST["uname"];
+@$uname =$_REQUEST["uname"];
 @$upwd = $_REQUEST["upwd"];
 
 if($uname && $upwd){
-    $sql = " SELECT uid FROM  user WHERE uname = '$uname' AND binary upwd = md5('$upwd')";
+    $sql = " SELECT uid FROM  user WHERE uname = '$uname' AND upwd = md5('$upwd')";
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_row($result);
     if($row){

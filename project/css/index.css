@@ -16,12 +16,98 @@
     height:400px;
     overflow: hidden;
     cursor:pointer;
+    position:relative;
 }
+/*#baiyechuang .dianul{
+    list-style: none;
+    position: absolute;
+    right: 27px;
+    bottom: 12px;
+}
+#baiyechuang .dianul li{
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    background:url(images/icons.png) no-repeat -23px -125px;
+    cursor: pointer;
+}*/
+.dianul li.cur{
+    background-position: -8px -125px;
+}
+.maonimen{
+    -webkit-perspective:600px;
+}
+.maonimen p{
+    position: absolute;
+    width: calc( 100% / 12);
+    height: 100px;
+    background-image:url(../images/banner_1.jpg);
+    font-size: 40px;
+}
+.maonimen.fei p{
+    opacity: 0;
+}
+.maonimen.fei p:nth-child(1){-webkit-transform:rotateX(30deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(2){-webkit-transform:rotateX(330deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(3){-webkit-transform:rotateX(3450deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(4){-webkit-transform:rotateX(-30deg) rotateY(-10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(5){-webkit-transform:rotateX(330deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(6){-webkit-transform:rotateX(80deg) rotateY(20deg) translateZ(400px);}
+.maonimen.fei p:nth-child(7){-webkit-transform:rotateX(340deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(8){-webkit-transform:rotateX(3450deg) rotateY(60deg) translateZ(400px);}
+.maonimen.fei p:nth-child(9){-webkit-transform:rotateX(230deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(10){-webkit-transform:rotateX(20deg) rotateY(20deg) translateZ(400px);}
+.maonimen.fei p:nth-child(11){-webkit-transform:rotateX(30deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(12){-webkit-transform:rotateX(10deg) rotateY(10deg) translateZ(400px);}
+
+.maonimen.fei p:nth-child(13){-webkit-transform:rotateX(30deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(14){-webkit-transform:rotateX(330deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(15){-webkit-transform:rotateX(3450deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(16){-webkit-transform:rotateX(-30deg) rotateY(-10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(17){-webkit-transform:rotateX(330deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(18){-webkit-transform:rotateX(-40deg) rotateY(40deg) translateZ(400px);}
+.maonimen.fei p:nth-child(19){-webkit-transform:rotateX(340deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(20){-webkit-transform:rotateX(3450deg) rotateY(-60deg) translateZ(400px);}
+.maonimen.fei p:nth-child(21){-webkit-transform:rotateX(230deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(22){-webkit-transform:rotateX(-80deg) rotateY(20deg) translateZ(400px);}
+.maonimen.fei p:nth-child(23){-webkit-transform:rotateX(30deg) rotateY(-30deg) translateZ(400px);}
+.maonimen.fei p:nth-child(24){-webkit-transform:rotateX(-20deg) rotateY(40deg) translateZ(400px);}
+
+.maonimen.fei p:nth-child(25){-webkit-transform:rotateX(30deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(26){-webkit-transform:rotateX(330deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(27){-webkit-transform:rotateX(3450deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(28){-webkit-transform:rotateX(-30deg) rotateY(-10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(29){-webkit-transform:rotateX(330deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(30){-webkit-transform:rotateX(40deg) rotateY(-20deg) translateZ(400px);}
+.maonimen.fei p:nth-child(31){-webkit-transform:rotateX(340deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(32){-webkit-transform:rotateX(3450deg) rotateY(60deg) translateZ(400px);}
+.maonimen.fei p:nth-child(33){-webkit-transform:rotateX(-230deg) rotateY(50deg) translateZ(400px);}
+.maonimen.fei p:nth-child(34){-webkit-transform:rotateX(20deg) rotateY(-20deg) translateZ(400px);}
+.maonimen.fei p:nth-child(35){-webkit-transform:rotateX(60deg) rotateY(-10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(36){-webkit-transform:rotateX(30deg) rotateY(10deg) translateZ(400px);}
+
+.maonimen.fei p:nth-child(37){-webkit-transform:rotateX(-30deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(38){-webkit-transform:rotateX(-330deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(39){-webkit-transform:rotateX(-3450deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(40){-webkit-transform:rotateX(-30deg) rotateY(-10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(41){-webkit-transform:rotateX(330deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(42){-webkit-transform:rotateX(-40deg) rotateY(20deg) translateZ(400px);}
+.maonimen.fei p:nth-child(43){-webkit-transform:rotateX(-340deg) rotateY(-10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(44){-webkit-transform:rotateX(-3450deg) rotateY(60deg) translateZ(400px);}
+.maonimen.fei p:nth-child(45){-webkit-transform:rotateX(230deg) rotateY(10deg) translateZ(400px);}
+.maonimen.fei p:nth-child(46){-webkit-transform:rotateX(-50deg) rotateY(20deg) translateZ(400px);}
+.maonimen.fei p:nth-child(47){-webkit-transform:rotateX(30deg) rotateY(40deg) translateZ(400px);}
+.maonimen.fei p:nth-child(48){-webkit-transform:rotateX(-10deg) rotateY(-10deg) translateZ(400px);}
 .banner-imgs{
     display: flex;
     justify-content: flex-start;
-    width:7680px;
+    width:9600px;
     height:400px;
+    
+    position:absolute;
+    top:0;
+    left:0;
     margin-left:calc(50% - 960px);
 }
 /* 下 圆点 */
@@ -331,8 +417,13 @@
     width:calc(100% - 120px);
 }
 .coupon-item-top h5{
+    width:100px;
+    height:26px;
     font-size:14px;
     padding:6px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .coupon-item-top p{
     color:#999;

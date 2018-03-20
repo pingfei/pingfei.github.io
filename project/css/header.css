@@ -15,18 +15,30 @@
 	margin-top:5px;
 }
 /****左:login-info****/
-.topbar>.login-info>span{
+/* .topbar>.login-info{
 	width:320px;
+} */
+.topbar>.login-info  .list{
+	float:right;
+	width:320px;
+}
+.topbar>.login-info  .list  span{
+	/* width:320px; */
 	padding:0 10px;
 }
-.topbar>.login-info>.login>a,
-.topbar>.login-info>.register>a{
+.topbar>.login-info .list a{
 	color:#3F6ACD;
-	font-weight:bold;
+	/* font-weight:bold; */
 }
-.topbar>.login-info>.login>a:hover,
-.topbar>.login-info>.register>a:hover{
+.topbar>.login-info  .list .logout a{
+	color:#666;
+}
+.topbar>.login-info  .list a:hover{
 	color:#f33;
+	text-decoration:underline;
+}
+.welcomeList{
+	display:none;
 }
 /****右:quick-menu****/
 .topbar>.quick-menu{
@@ -115,6 +127,24 @@
 	width:100%;
 	background:#fff;
 }
+.search-fixed{
+	height:60px;
+}
+.search-fixed .wrapper{
+	padding:0;
+}
+.search-fixed .wrapper{
+	padding:0;
+}
+.search-fixed .wrapper .search-box{
+	margin-top:10px;
+}
+.search-fixed .wrapper .quick-entry {
+    padding: 15px 25px;
+}
+
+
+
 .wrapper{
 	height:150px;
 	width:100%;
