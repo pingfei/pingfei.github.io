@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="example">
+        <father></father>
+    </div>
+    <script>
+        Vue.component("father",{
+            template:`
+                <div>
+                    <ul>
+                        <li v-for="tmp in list">{{tmp}}</li>
+                    </ul>
+                    <son uname="Lucy" @fatherEvent="showMsg"></son>
+                    <son uname="Mike" @fatherEvent="showMsg"></son>
+                </div>
+            `,
+            data:function(){
+                return {list:[]}
+            },
+            methods:{
+                showMsg:function(msg){
+                    this.list.push(msg)
+                }
+            }
+        })
+        Vue.component("son",{
+            props:["uname"],
+            template:`
+                <div>
+                    <label>{{uname}}</label>
+                    <input v-model="umsg"/>
+                    <button @click="sendToFather">发送信息</button>
+                </div>
+            `,
+            data:function(){
+                return {umsg:""}
+            },
+            methods:{
+                sendToFather:function(){
+                    var msg = this.uname+":"+this.umsg
+                    this.$emit("fatherEvent",msg)
+                    this.umsg=""
+                }
+            }
+        })
+        new Vue({
+            el:"#example"
+        })
+    </script>
+</body>
+</html>

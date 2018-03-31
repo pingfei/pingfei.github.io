@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="example">
+        <router-view></router-view>
+    </div>
+    <script>
+        var Login = Vue.component("my-login",{
+            template:`
+                <div>
+                    <h1>这是登陆页面</h1>    
+                </div>
+            `
+        })
+        var Register = Vue.component("my-register",{
+            template:`
+                <div>
+                    <h1>这是注册页面</h1>    
+                </div>
+            `
+        })
+        var NotFound = Vue.component("not-found",{
+            template:`
+                <div>
+                    <h1>404 , pages is not found</h1>    
+                </div>
+            `
+        })
+        const myRoutes=[
+            {path:'',component:Login},
+            {path:"/login",component:Login},
+            {path:"/register",component:Register},
+            {path:"*",component:NotFound}
+        ]
+        const myRouter =new VueRouter({
+            routes:myRoutes
+        })
+        new Vue({
+            router:myRouter,
+            el:"#example"
+        })
+    </script>
+</body>
+</html>
