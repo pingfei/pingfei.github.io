@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="example">
+        <router-view></router-view>
+    </div>
+    <script>
+        var Cart = Vue.component("my-cart",{
+            template:`
+                <div>
+                    <h1>购物车</h1>
+                    <button @click="balance">结算</button>
+                </div>
+            `,
+            methods:{
+                balance:function(){
+                    this.$router.push("/OC/200")
+                }
+            }
+        })
+        var OC = Vue.component("order-confirm",{
+            data:function(){
+                return {totalPrice:""}
+            },
+            template:`
+                <div>
+                    <h1>订单确认</h1>
+                    <h2>总价为：{{totalPrice}}</h2>
+                    <router-link to="/one">to 1</router-link>
+                    <router-link to="/two">to 2</router-link>
+                    <router-view></router-view>
+                </div>
+            `,
+            mounted:function(){
+                this.totalPrice = this.$route.params.price
+            }
+        })
+        var NotFound = Vue.component("not-found",{
+            template:`
+                <div>
+                    <h1>404 , pages is not found!</h1>
+                </div>
+            `
+        })
+        var StepOne = Vue.component("step-one",{
+            template:`
+                <div>step one</div>
+            `
+        })
+        var StepTwo = Vue.component("step-two",{
+            template:`
+                <div>step two</div>
+            `
+        })
+        const myRoutes = [
+            {path:"",component:Cart},
+            {path:"/cart",component:Cart},
+            {path:"/oc/:price",component:OC,children:[
+                {path:"",component:StepOne},
+                {path:"/one",component:StepOne},
+                {path:"/two",component:StepTwo},
+            ]},
+            {path:"*",component:NotFound}
+        ]
+        const myRouter = new VueRouter({
+            routes:myRoutes
+        })
+        new Vue({
+            router:myRouter,
+            el:"#example"
+        })
+    </script>
+</body>
+</html>

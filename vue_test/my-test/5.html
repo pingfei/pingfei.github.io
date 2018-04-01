@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
+    <script src="js/vue-resource.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="example">
+        <router-view></router-view>
+    </div>
+    <script>
+        var Login = Vue.component("my-login",{
+            template:`
+                <div>
+                    <h1>这是登陆页面</h1>
+                    <button @click="toEmail">邮箱</button>
+                    <button @click="loadData">获取资源</button>
+                </div>
+            `,
+            methods:{
+                toEmail:function(){
+                    this.$router.push("/Email")
+                },
+                loadData:function(){
+                    this.$http.get("http://jsonplaceholder.typicode.com/users").then(res=>{
+                        console.log(res.data)
+                    })
+                }
+            }
+        })
+        var Email = Vue.component("my-email",{
+            template:`
+                <div>
+                    <h1>邮件页面</h1>
+                    <router-link to="/inbox">收件</router-link>
+                    <router-link to="/outbox">发件</router-link>
+                    <router-link to="/draft">草稿</router-link>
+                    <router-view></router-view>
+                </div>
+            `
+        });
+        var Inbox = Vue.component("my-inbox",{
+            template:`
+                <div>收件箱</div>
+            `
+        })
+        var Outbox = Vue.component("my-outbox",{
+            template:`
+                <div>发件箱</div>
+            `
+        })
+        var Draft = Vue.component("my-draft",{
+            template:`
+                <div>草稿箱</div>
+            `
+        })
+        var Not = Vue.component("not-f",{
+            template:`<div>not found</div>`
+        })
+        const myRoutes = [
+            {path:"",component:Login},
+            {path:"/login",component:Login},
+            {path:"/email",component:Email,children:[
+                {path:"",component:Inbox},
+                {path:"/inbox",component:Inbox},
+                {path:"/outbox",component:Outbox},
+                {path:"/draft",component:Draft},
+                {path:"/email/*",component:Not}
+            ]}
+        ];
+        const myRouter = new VueRouter({
+            routes:myRoutes
+        })
+        new Vue({
+            router:myRouter,
+            el:"#example"
+        })
+    </script>
+</body>
+</html>
