@@ -199,9 +199,6 @@
     export default{
         data(){
             return {htmlName:""}
-        },
-        beforeMount(){
-            
         }
     }
 </script>

@@ -5,7 +5,7 @@ body{
 	color:#666;
 	margin:0;
 	padding:0;
-	background-color:#f5f5f5;
+    background-color:#f5f5f5;
 }
 p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd{
 	margin:0;
@@ -118,6 +118,7 @@ input[type="submit"],
 }
 .registerBody{
     background:#fff;
+    height:100%;
 }
 /***********  1.上:头部   end  ***********/
 

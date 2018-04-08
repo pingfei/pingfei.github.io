@@ -14,6 +14,7 @@ export default new Router({
   routes: [
     // {path: '/', component: LoginReg, children: [
     {path: '/', component: LoginReg, children: [
+      {path: '/', component: Login},
       {path: '/login', component: Login},
       {path: '/register', component: Register}
     ]},

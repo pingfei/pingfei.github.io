@@ -130,6 +130,7 @@ main{
     height:197px;
     top:36px;
     left:0;
+    z-index:100;
     border:1px solid #ddd;
     display:none;
 }
