@@ -131,6 +131,7 @@ main{
     top:36px;
     left:0;
     z-index:100;
+    background:#fff;
     border:1px solid #ddd;
     display:none;
 }
