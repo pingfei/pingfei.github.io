@@ -9,6 +9,7 @@
     <!-- <link rel="stylesheet" href="css/nav-bar.css"> -->
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/fixed-bar.css">
     <link rel="stylesheet" href="css/footer.css">
     <title>products</title>
 </head>
@@ -81,7 +82,7 @@
             </div>
             <!-- 1 条件选择 end -->
             <!-- 2 产品分页 start -->
-            <div class="products-container clear">
+            <div class="products-container clear" id="products-container">
                 <!-- 左 分页 -->
                 <div class="products-content lf">
                     <div class="products-title clear">
@@ -261,7 +262,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="mini-page rt">
+                        <div class="mini-page rt" id="mini-page">
                             <em>2/100</em>&nbsp;&nbsp;
                             <a href="#" class="prev">
                                 <i class="iconfont icon-xiangzuojiantou"></i>
@@ -272,7 +273,7 @@
                         </div>
                     </div>
                     <!-- 图文列表 -->
-                    <ul class="products-list">
+                    <ul class="products-list" id="products-list">
                         <li class="products-item">
                             <a href="#">
                                 <img src="images/products/products_1.jpg">
@@ -491,8 +492,8 @@
                         </li>
                     </ul>
                     <!-- 页码 -->
-                    <div class="products-pages">
-                        <a href="#" class="pages-prev">
+                    <div class="products-pages" id="products-pages">
+                        <a href="#" class="pages_prev">
                             <i class="iconfont icon-xiangzuojiantou"></i>
                             上一页
                         </a>
@@ -505,7 +506,7 @@
                         <a href="#">7</a>
                         <a href="#" class="page-ellipsis">···</a>
                         <a href="#">100</a>
-                        <a href="#" class="pages-next">
+                        <a href="#" class="pages_next">
                             下一页
                             <i class="iconfont icon-xiangyoujiantou"></i>
                         </a>
@@ -575,6 +576,7 @@
     <footer></footer>
     <script src="js/jquery-3.2.0.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/products.js"></script>
     <!-- <script src="js/nav-bar.js"></script> -->
     <script src="js/fixed-bar.js"></script>
     <script src="js/footer.js"></script>

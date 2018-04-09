@@ -25,7 +25,7 @@ $(()=>{
         var p = $("[data-id=user-p]").val();
         var c = $("[data-id=user-c]").val();
         var $tips = $(".login-wrong-tips");
-        var uReg = /^[a-zA-Z0-9]{4,16}$/i;
+        var uReg = /^[a-zA-Z0-9]{4,16}$/;
         if(!uReg.test(u)){
             $tips.html("用户名错误，请重输");
             $(".login-wrong-tips").addClass("in");

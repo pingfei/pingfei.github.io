@@ -59,7 +59,7 @@ main{
 /* 分页 */
 .products-content{
     width:960px;
-    height:1000px;
+    /* height:1000px; */
     /* border:1px solid red; */
 }
 .products-title{
@@ -257,9 +257,15 @@ main{
     border-color:#f33;
     color:#666;
 }
+.mini-page .disabled .iconfont{
+    color:#e6e6e6;
+}
+.mini-page .disabled:hover{
+    border-color:#e6e6e6;
+}
 .products-list{
     display:flex;
-    justify-content: space-between;
+    justify-content:flex-start;
     flex-wrap: wrap;
 }
 /* 图文列表 */
@@ -345,6 +351,7 @@ main{
     padding:0 10px;
     border:1px solid #e6e6e6;
     color:#666;
+    /* margin:0; */
 }
 .products-pages>a:hover{
     border-color:#c00;
@@ -362,6 +369,20 @@ main{
 .products-pages .page-ellipsis{
     border:0;
     padding:0;
+}
+.products-pages .disabled{
+    color:#bfbfbf;
+    background:#e6e6e6;
+    border:1px solid #e6e6e6;
+}
+.products-pages .disabled:hover{
+    color:#bfbfbf;
+}
+.products-pages .disabled .iconfont{
+    color:#bfbfbf;
+}
+.products-pages .disabled:hover{
+    border-color:#e6e6e6;
 }
 /* 广告 */
 .products-ads{

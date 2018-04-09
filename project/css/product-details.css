@@ -1463,7 +1463,10 @@ visibility: visible; */
     position: fixed;
     z-index: 51;
     top: 20vh;
-    right: 10%;
+    right: 9%;
+    overflow:hidden;
+    height:152px;
+    border: 1px solid #ededed;
 }
 .quick-dove, .qq-consult{
     display: block;
@@ -1474,7 +1477,7 @@ visibility: visible; */
     font-size: 14px;
     line-height: 22px;
     text-align: center;
-    border: 1px solid #ededed;
+    
     background-color: #fff;
     position: relative;
     color: #333;
@@ -1494,7 +1497,6 @@ visibility: visible; */
     background-color: #ffeded;
     color: #333;
     text-decoration: none;
-    border: 1px solid #ffd9d9;
 }
 .consult-layer .hover .qq-consult {
     border-bottom: 1px solid #ffeded;

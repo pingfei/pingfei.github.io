@@ -8,20 +8,20 @@ $(()=>{
             $(".stand-nav").addClass("fade");
             $(".nav").addClass("border_bottom");
         }
-        console.log(1)
+        // console.log(1)
         // 登陆
         $(document.body||body).on("click","[data-name=login]",function(){
             location="login.html?back="+location.href
         })
         //登陆状态
         function isLogin(){
-            console.log(2)
+            // console.log(2)
             $.ajax({
                 url:"data/users/islogin.php",
                 type:"get",
                 dataType:"json",
                 success:function(data){
-                    console.log(data)
+                    // console.log(data)
                     if(data.ok==0){
                         $("[data-toggle=loginList]").show()
                             .next().hide();
@@ -34,13 +34,17 @@ $(()=>{
                     }
                 },
                 error:function(){
-                    console.log(444)
+                    // console.log(444)
                 }
             })
-            console.log(4)
+            // console.log(4)
         }
         isLogin();
-        
+        var search=location.search;//?kw=mac i7 256g
+        if(search.indexOf("kw")!=-1)
+            $("#keyword").val(
+                decodeURI(search.split("=")[1])
+            );
     });
 });
 $(()=>{
@@ -50,8 +54,9 @@ $(()=>{
         function(){
             var $txtSearch = $(this).prev().children("#keyword")
             // console.log($txtSearch.val())
-            if($.trim($txtSearch.val())!==""){
-                location = "products.html?kws=" + $.trim($txtSearch.val());
+            let kws = $.trim($txtSearch.val())
+            if(kws!==""){
+                location = "products.html?kws=" + kws;
             }else{
                 location = "products.html";
             }
